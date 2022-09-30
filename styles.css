@@ -1,0 +1,13 @@
+body {
+    background-image:url('Images/starry.jpg');
+}
+div.section {
+    background:rgba(58, 63, 88, 0.6);
+}
+div.title {
+    background:rgba(165, 64, 160, 0.2);
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
