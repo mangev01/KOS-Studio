@@ -1,5 +1,5 @@
 body {
-    background-image:url('Images/starry.jpg');
+    background-image:url('../Images/starry.jpg');
 }
 div.section {
     background:rgba(58, 63, 88, 0.6);
