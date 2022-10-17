@@ -10,33 +10,45 @@ div.title {
 html, body {
     margin: 0;
     height: 100%;
+    
+}
+div.title{
+  margin-top: 5%;
 }
 
 /*Tyler Added this section but you can remove if needed*/
 ul {
-    position: fixed;
+    position: sticky;
     width: 100%;
-    height: 7%;
+    height: 3em;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow:hidden;
     background-color: #333;
   }
   
   li {
-    float: left;
+    display: inline-block;
+    width: auto;
+    height: auto;
   }
   
   li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    margin-top: 5px;
+    margin-left: 10px;
     text-decoration: none;
+    font-size: 20px;
   }
   
   li a:hover {
     background-color: #111;
   }
+.navbar{
+  position:static;
+
+}
   /*End of Tyler's addon :D */
