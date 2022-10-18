@@ -20,9 +20,11 @@ body {
     flex-direction: column;
 }
 
-.box img {
-    width: 100px;
-    margin-top: -20px;
+
+.box img{
+	width:100px;
+    height: auto;
+    margin-top:-20px ;
 }
 
 .header {
@@ -159,4 +161,8 @@ input[type=checkbox] {
     text-align: left;
     color: #ffffff;
     font-size: 15px;
+}
+/*Background design*/
+body {
+    background-image:url('../Images/starry.jpg');
 }
