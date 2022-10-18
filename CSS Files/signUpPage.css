@@ -155,3 +155,7 @@ input[type=checkbox]{
     color: #ffffff;
     font-size: 15px;
 }
+/*Background design*/
+body {
+    background-image:url('../Images/starry.jpg');
+}
