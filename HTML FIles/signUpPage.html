@@ -1,54 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOS Sign Up</title>
-    <link href="../CSS Files/signUpPage.css" rel="stylesheet" type="text/css">
+    <title>LogIn and SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="/CSS Files/signUpPage.css">
 </head>
-<body>
-    
-    <!-- Sign Up Box: class: box1-->
-    <form action="/HTML FIles/mainpage.html">
-        <div class="box1">
-            <h1>New User?</h1>
-            <h3>Sign up now!</h3>
-                <!-- List of Information being saved-->
-                <!--Text Fields-->
-                <label for="firstName">First name: </label>
-                <input type="text" id="firstName" name="firstName">
-                    <br><br>
-                <label for="lastName">Last name: </label>
-                <input type="text" id="lastName" name="lastName">
-                    <br><br>
-                <label for="emailID">Email: </label>
-                <input type="email" id="emailID" name="emailID">
-                    <br><br>
-                <label for="username">Username: </label>
-                <input type="text" id="username" name="username">
-                    <br><br>
-                <label for="Password">Password: </label>
-                <input type="password" id="password" name="password">
-                    <br><br>
-                <label for="confirmPass">Confirm Password: </label>
-                <input type="password" id="confirmPass" name="confirmPass">
-                    <br><br>
-                <!--Radio Button - Gender-->
-                <label for="radMale">Male</label>
-                <input type="radio" id="radMale" name="gender">
-                    
-                <label for="radFemale">Female</label>
-                <input type="radio" id="radFemale" name="gender">
-                    
-                <label for="radPNTS">Prefer Not to Say</label>
-                <input type="radio" id="radPNTS" name="gender">
-                    <br><br>
-                <label for="btnSignUp"></label>
-                <input type="submit" id="btnSignUp" name="btnSignUp" value="SIGN UP">
-                    <br><br>
-        </div>
-    </form>
 
+<body>
+    <div class="box">
+
+        <img src="/Images/userIcon.png">
+        <div class="page">
+            <div class="header">
+                <a id="login" class="active" href="#login">login</a>
+                <a id="signup" href="#signup">signup</a>
+            </div>
+            <div id="errorMsg"></div>
+            <div class="content">
+                <form class="login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                    <input type="text" name="name" id="logName" placeholder="Username">
+                    <input type="password" name="password" id="logPassword" placeholder="Password">
+                    <div id="check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Login">
+                    <a href="#">Forgot Password?</a>
+                </form>
+                <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" method="POST">
+                    <input type="email" name="email" id="signEmail" placeholder="Email">
+                    <input type="text" name="name" id="signName" placeholder="Username">
+                    <input type="password" name="password" id="signPassword" placeholder="Password"><br>
+                        <!--Gender Selection-->
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="pnts">Prefer Not To Say</option>
+                        </select>
+                        <br>
+                    <input type="submit" value="SignUp">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/JS Files/signUpPage.js"></script>
 </body>
-</html>
