@@ -1,0 +1,27 @@
+.box1 {
+    font-size: 20px;
+    text-align: center;
+    border: 5px solid pink;
+    background-color: rgb(167, 80, 140);
+    padding: 20px;
+    
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+label {
+    white-space: pre;
+    color: white;
+}
+
+input {
+    white-space: pre;
+}
