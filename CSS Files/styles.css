@@ -43,6 +43,10 @@ ul {
     text-decoration: none;
     font-size: 20px;
   }
+  li .signUp{ /* This only affects the signup button but everything in the UL is affected by height :/ */
+    color: blue;
+    
+  }
   
   li a:hover {
     background-color: #111;
