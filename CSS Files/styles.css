@@ -1,3 +1,4 @@
+/*Created by Corey*/
 body {
     background-image:url('../Images/starry.jpg');
 }
@@ -5,7 +6,7 @@ div.section {
     background:rgba(58, 63, 88, 0.6);
 }
 div.title {
-    background:rgba(165, 64, 160, 0.2);
+    /*background:rgba(165, 64, 160, 0.2);*/
 }
 html, body {
     margin: 0;
@@ -15,44 +16,3 @@ html, body {
 div.title{
   margin-top: 5%;
 }
-
-/*Tyler Added this section but you can remove if needed*/
-ul {
-    position: sticky;
-    width: 100%;
-    height: 3em;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
-    background-color: #333;
-  }
-  
-  li {
-    display: inline-block;
-    width: auto;
-    height: auto;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    margin-top: 5px;
-    margin-left: 10px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  li .signUp{ /* This only affects the signup button but everything in the UL is affected by height :/ */
-    color: blue;
-    
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-.navbar{
-  position:static;
-
-}
-  /*End of Tyler's addon :D */
