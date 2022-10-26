@@ -1,41 +1,43 @@
 /*Corey Moved this information to a new CSS file*/
 /*Tyler Added this section*/
-ul {
-    position: sticky;
-    width: 100%;
-    height: 3em;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
-    background-color: #333;
-  }
-  
-  li {
-    display: inline-block;
-    width: auto;
-    height: auto;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    margin-top: 5px;
-    margin-left: 10px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  li .signUp{ /* This only affects the signup button but everything in the UL is affected by height :/ */
-    color: rgb(194, 197, 13);
-    
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  .navbar{
-  position:static;
-
+.nav-container{
+  background-color: #333;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
 }
+.right, .left{
+  list-style-type: none;
+}
+.right li , .left li{
+  display: inline-block;
+  margin-left: 10px;
+  color: white;
+}
+.right li a, .left li a{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  padding: 14px, 16px;
+}
+.right li a:hover, .left li a:hover{
+  background-color: #111;
+}
+.left{
+  padding-left: 2%;
+  
+}
+.right{
+  padding-right: 2%;
+}
+.left li a{
+  color: white;
+}
+li .signUp{ /* This only affects the signup button but everything in the UL is affected by height :/ */
+  color: rgb(194, 197, 13);
+  width:max-content;
+}
+
   /*End of Tyler's addon :D */
