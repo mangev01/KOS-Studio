@@ -1,16 +1,19 @@
 /*Created by Corey*/
 body {
-    background-image:url('../Images/starry.jpg');
-}
-div.section {
-    background:rgba(58, 63, 88, 0.6);
+    background-image: url('../Images/starry.jpg');
 }
 
-html, body {
+div.section {
+    background: rgba(58, 63, 88, 0.6);
+}
+
+html,
+body {
     margin: 0;
     height: 110%;
-    
+
 }
-div.title{
-  margin-top: 5%;
+
+div.title {
+    margin-top: 5%;
 }

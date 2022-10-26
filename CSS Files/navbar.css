@@ -1,20 +1,26 @@
 /*Corey Moved this information to a new CSS file*/
 /*Tyler Added this section*/
-.nav-container{
+.nav-container {
   background-color: #333;
   border: 1px solid;
   display: flex;
   justify-content: space-between;
 }
-.right, .left{
+
+.right,
+.left {
   list-style-type: none;
 }
-.right li , .left li{
+
+.right li,
+.left li {
   display: inline-block;
   margin-left: 10px;
   color: white;
 }
-.right li a, .left li a{
+
+.right li a,
+.left li a {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -22,22 +28,29 @@
   font-size: 20px;
   padding: 14px, 16px;
 }
-.right li a:hover, .left li a:hover{
+
+.right li a:hover,
+.left li a:hover {
   background-color: #111;
 }
-.left{
+
+.left {
   padding-left: 2%;
-  
-}
-.right{
-  padding-right: 2%;
-}
-.left li a{
-  color: white;
-}
-li .signUp{ /* This only affects the signup button but everything in the UL is affected by height :/ */
-  color: rgb(194, 197, 13);
-  width:max-content;
+
 }
 
-  /*End of Tyler's addon :D */
+.right {
+  padding-right: 2%;
+}
+
+.left li a {
+  color: white;
+}
+
+li .signUp {
+  /* This only affects the signup button but everything in the UL is affected by height :/ */
+  color: rgb(194, 197, 13);
+  width: max-content;
+}
+
+/*End of Tyler's addon :D */
