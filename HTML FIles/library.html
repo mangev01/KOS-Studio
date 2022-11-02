@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOS Studio Library</title>
     <link rel="stylesheet" type="text/css" href="../CSS Files/library.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS Files/navbar.css" />
     <script type="text/js" src="../JS Files/library.js"></script>
 </head>
-<body>
 
+<body>
+    <!--This creates Navigaction bar at the top of the page-->
+    <div>
+        <nav class="nav-container">
+            <ul class="left">
+                <li><a href="./mainpage.html" target="_self">Home</a></li>
+                <li><a href="./about.html" target="_self">About</a></li>
+                <li><a href="./developers.html" target="_self">Developers</a></li>
+                <li><a href="./library.html" target="_self">Library</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="./signUpPage.html" target="_self" class="signUp">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--End of Navigation Bar Code-->
+    <div class="bigDIV">
     <!--Left Side of Page - Playlist Selection-->
-    <div>    
+    <div class="leftSide">
         <div>
             <img src="../Images/userIcon.png">
         </div>
@@ -21,73 +39,75 @@
         <!--Users Playlist-->
         <div>
             <button type="button">Playlist1</button>
-                <br><br>
+            <br><br>
             <button type="button">Playlist2</button>
-                <br><br>
+            <br><br>
             <button type="button">Playlist3</button>
-                <br><br>
+            <br><br>
         </div>
     </div>
 
     <!--Current Playlist info-->
-    <div>
-        <div>
-            <img src="../Images/defaultIMG.png" id="playlistIMG" width="15%" height="15%">
-            <h2 id="currentPlaylistName">Playlist Name</h2>
-        </div>
-    </div>
-
-    <!--Song Selection-->
-    <div>
-        <table id="songsList" style="width:100%">
-            <tr>
-                <th style="width:5%">#</th>
-                <th style="width:70%">Title</th>
-                <th style="width:20%">Time</th>
-            </tr>
-            <!--PLACE HOLDER DATA-->
-            <tr>
-                <td>1</td>
-                <td>P.I.M.P</td>
-                <td>4:09</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>AROUNT THE WORLD - EEM TRIPLIN</td>
-                <td>2:06</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Marvins Room</td>
-                <td>5:47</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>See You Again (feat.Kali Uchis)</td>
-                <td>3:00</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Winter Blossom(feat.SAAY)</td>
-                <td>3:38</td>
-            </tr>
-        </table>
-    </div>
-
-    <div>
-        <div>
-            <h2>SONG PLAYING TITLE</h2>
-        </div>
-        <div>
-            <img src="../Images/play-button.png" width="10%" height="10%">
-            <img src="../Images/pause.png" width="10%" height="10%">
-        </div>
-        <div>
-            <img src="../Images/high-volume.png" width="40px" height="40px">
-            <imput type="range" id="volumeSlider"></imput>
+    <div class="rightSide">
+        <div class="header">
+            <div>
+                <img src="../Images/defaultIMG.png" id="playlistIMG" width="15%" height="15%">
+                <h2 id="currentPlaylistName">Playlist Name</h2>
+            </div>
         </div>
 
+        <!--Song Selection-->
+        <div>
+            <table class="table" id="songsList" style="width:100%">
+                <tr>
+                    <th style="width:5%">#</th>
+                    <th style="width:70%">Title</th>
+                    <th style="width:20%">Time</th>
+                </tr>
+                <!--PLACE HOLDER DATA-->
+                <tr>
+                    <td>1</td>
+                    <td>P.I.M.P</td>
+                    <td>4:09</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AROUNT THE WORLD - EEM TRIPLIN</td>
+                    <td>2:06</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Marvins Room</td>
+                    <td>5:47</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>See You Again (feat.Kali Uchis)</td>
+                    <td>3:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Winter Blossom(feat.SAAY)</td>
+                    <td>3:38</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="nowPlaying">
+            <div>
+                <h2>SONG PLAYING TITLE</h2>
+            </div>
+            <div>
+                <img src="../Images/play-button.png" class="img1">
+                <img src="../Images/pause.png" class="img1">
+
+                <img src="../Images/high-volume.png" class="img2" align="middle">
+                <imput type="range" id="volumeSlider"></imput>
+            </div>
+        </div>
     </div>
+</div>
 
 </body>
+
 </html>
