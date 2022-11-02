@@ -1,8 +1,9 @@
-/*Corey Moved this information to a new CSS file*/
+/*Corey Moved this information to a new CSS file
+Cleaned up some CSS*/
 /*Tyler Added this section*/
 .nav-container {
-  background-color: #333;
-  border: 1px solid;
+  background-color: rgb(34, 34, 34);
+  background-image: var(--bs-gradient);
   display: flex;
   justify-content: space-between;
 }
@@ -10,37 +11,29 @@
 .right,
 .left {
   list-style-type: none;
+  margin: .5em;
+}
+.right {
+  padding-right: 2em;
 }
 
 .right li,
 .left li {
   display: inline-block;
-  margin-left: 10px;
   color: white;
 }
 
 .right li a,
 .left li a {
   text-decoration: none;
-  display: block;
   width: 100%;
   height: 100%;
   font-size: 20px;
-  padding: 14px, 16px;
 }
 
-.right li a:hover,
-.left li a:hover {
-  background-color: #111;
-}
-
-.left {
-  padding-left: 2%;
-
-}
-
-.right {
-  padding-right: 2%;
+.left li img{
+  width: 35px;
+  height: 35px;
 }
 
 .left li a {
@@ -49,8 +42,12 @@
 
 li .signUp {
   /* This only affects the signup button but everything in the UL is affected by height :/ */
-  color: rgb(194, 197, 13);
-  width: max-content;
+  color: rgb(193, 70, 250)
+}
+
+.button-navbar {
+  background-color:rgb(41, 41, 41);
+  box-shadow: 0px 0px 10px rgb(119, 64, 145), 0px 0px 50px rgba(119, 9, 170, 0.308);
 }
 
 /*End of Tyler's addon :D */

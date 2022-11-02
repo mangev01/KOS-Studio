@@ -1,6 +1,8 @@
 body {
     background-image: url(/Images/starry.jpg);
+    font-family: Verdana, Tahoma, sans-serif;
 }
+
 .bigDIV {
     display: inline-block;
     background-color: white;
