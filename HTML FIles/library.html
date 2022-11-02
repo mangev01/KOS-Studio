@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOS Studio Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../CSS Files/library.css" />
     <link rel="stylesheet" type="text/css" href="../CSS Files/navbar.css" />
     <script type="text/js" src="../JS Files/library.js"></script>
@@ -38,27 +40,25 @@
         </div>
         <!--Users Playlist-->
         <div>
-            <button type="button">Playlist1</button>
+            <button type="button" class="btn btn-outline-dark">Playlist1</button>
             <br><br>
-            <button type="button">Playlist2</button>
+            <button type="button" class="btn btn-outline-dark">Playlist2</button>
             <br><br>
-            <button type="button">Playlist3</button>
+            <button type="button" class="btn btn-outline-dark">Playlist3</button>
             <br><br>
         </div>
     </div>
 
     <!--Current Playlist info-->
     <div class="rightSide">
-        <div class="header">
-            <div>
-                <img src="../Images/defaultIMG.png" id="playlistIMG" width="15%" height="15%">
-                <h2 id="currentPlaylistName">Playlist Name</h2>
-            </div>
+        <div class="header justify-content-center">
+            <img src="../Images/defaultIMG.png" id="playlistIMG">
+            <h2 id="currentPlaylistName">Playlist Name</h2>
         </div>
 
         <!--Song Selection-->
         <div>
-            <table class="table" id="songsList" style="width:100%">
+            <table class="table rightTable" id="songsList" style="width:100%">
                 <tr>
                     <th style="width:5%">#</th>
                     <th style="width:70%">Title</th>
@@ -93,16 +93,21 @@
             </table>
         </div>
 
-        <div class="nowPlaying">
+        <div class="nowPlaying bottom-centering">
             <div>
                 <h2>SONG PLAYING TITLE</h2>
             </div>
             <div>
-                <img src="../Images/play-button.png" class="img1">
-                <img src="../Images/pause.png" class="img1">
-
-                <img src="../Images/high-volume.png" class="img2" align="middle">
-                <imput type="range" id="volumeSlider"></imput>
+                <button type="button" class="btn btn-link">
+                    <img src="../Images/play-button.png" class="img1">
+                </button>
+                <button type="button" class="btn btn-link">
+                    <img src="../Images/pause.png" class="img1">
+                </button>
+                <button type="button" class="btn btn-link">
+                    <img src="../Images/high-volume.png" class="img2">
+                </button>
+                <input type="range" id="volumeSlider"></imput>
             </div>
         </div>
     </div>
