@@ -11,22 +11,22 @@ app.get('/mainpage', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname + '../HTML_Files/mainpage.html'));
+    res.sendFile(path.join(__dirname + '../HTML_Files/about.html'));
     res.status(200)
 })
 
 app.get('/developers', (req, res) => {
-    res.sendFile(path.join(__dirname + '../HTML_Files/mainpage.html'));
+    res.sendFile(path.join(__dirname + '../HTML_Files/developers.html'));
     res.status(200)
 })
 
 app.get('/library', (req, res) => {
-    res.sendFile(path.join(__dirname + '../HTML_Files/mainpage.html'));
+    res.sendFile(path.join(__dirname + '../HTML_Files/library.html'));
     res.status(200)
 })
 
 app.get('/signUpPage', (req, res) => {
-    res.sendFile(path.join(__dirname + '../HTML_Files/mainpage.html'));
+    res.sendFile(path.join(__dirname + '../HTML_Files/signUpPage.html'));
     res.status(200)
 })
 
