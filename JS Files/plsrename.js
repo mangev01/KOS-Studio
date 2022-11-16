@@ -30,6 +30,13 @@ app.get('/signUpPage', (req, res) => {
     res.status(200)
 })
 
+//if the page was not found
+app.use((req, res) => {
+    res.type('text/plain')
+    res.status(404)
+    res.send('404 Page Not Found')
+})
+
 app.listen(port, function() {
     console.log('listening to port %d',port)
 })
