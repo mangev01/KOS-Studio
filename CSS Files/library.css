@@ -1,6 +1,10 @@
+table, th, td {
+    border: 1px solid black;
 body {
     background-image: url(/Images/starry.jpg);
+    font-family: Verdana, Tahoma, sans-serif;
 }
+
 .bigDIV {
     display: inline-block;
     background-color: white;
@@ -76,39 +80,8 @@ body {
 .rightTable {
     text-align: center;
     border-collapse: collapse;
-    height: 20em;
 }
 
 tr:hover {
     background-color: rgba(230, 159, 252, 0.726);
-}
-
-/*Bottom of the page*/
-.bottom-centering {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-}
-
-.nowPlaying {
-    background-color: brown;
-    color: white;   
-    height: 20%;
-}
-
-.nowPlaying h2 {
-    float:left;
-    margin-left: 50px;
-    font-size: 30px;
-}
-
-.img1 {
-    width: 100px;
-    height: 100px;
-}
-
-.img2 {
-    float: right;
-    width: 50px;
-    height: 50px;
 }
