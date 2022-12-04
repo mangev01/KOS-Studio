@@ -4,7 +4,7 @@ const path = require('path')
 const mongoose = require('mongoose')
 
 
-mongoose.connect('mongodb://127.0.0.1/test', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://TestUser:test@kosstudio.s0dh2.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
@@ -14,6 +14,7 @@ db.once('open', function() {
 })
 //login schema
 const loginSchema = new mongoose.Schema({
+    email: String,
     username: String,
     password: String
   })
@@ -85,7 +86,9 @@ app.get('/signupcss', (req,res) => {
 })
 
 app.post("/signUpPage.html",(req,res)=>{
-    var myData=new loginThing(req.body);
+    var myData=new loginThing({email: res.body.email,
+        username: req.body,
+        password: req.body});
     myData.save().then(()=>{
         res.status(200).sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
     })
