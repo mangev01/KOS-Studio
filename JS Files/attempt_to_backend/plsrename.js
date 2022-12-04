@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+
 const mongoose = require('mongoose')
 
 
@@ -18,6 +19,7 @@ const loginSchema = new mongoose.Schema({
   })
 
 const loginThing = mongoose.model('loginStuff', loginSchema)
+
 
 const app = express()
 
@@ -80,6 +82,13 @@ app.get('/signUpPage.html', (req, res) => {
 //signuppage CSS
 app.get('/signupcss', (req,res) => {
     res.sendFile(path.join(__dirname,'..', '..','csS Files', 'signUpPage.css'));
+})
+
+app.post("/signUpPage.html",(req,res)=>{
+    var myData=new loginThing(req.body);
+    myData.save().then(()=>{
+        res.status(200).sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
+    })
 })
 
 //navbar css
