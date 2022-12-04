@@ -1,14 +1,14 @@
 /*Created by Corey*/
 body {
-    background-image: url('../Images/starry.jpg');
+    background: rgb(0, 0, 0);
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 div.section {
-    background: rgba(58, 63, 88, 0.6);
+    background: rgb(5, 10, 34);
 }
 
-html,
-body {
+html, body {
     margin: 0;
     height: 110%;
 
