@@ -86,9 +86,9 @@ app.get('/signupcss', (req,res) => {
 })
 
 app.post("/signUpPage.html",(req,res)=>{
-    var myData=new loginThing({email: res.body.email,
-        username: req.body,
-        password: req.body});
+    var myData=new loginThing({email: "qwer@qwerqwer",
+        username: "qwerqwerqwer",
+        password: "qwerqwerqwer"});
     myData.save().then(()=>{
         res.status(200).sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
     })
