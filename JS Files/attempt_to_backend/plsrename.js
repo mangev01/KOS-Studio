@@ -2,6 +2,22 @@ const express = require('express')
 const path = require('path')
 
 
+mongoose.connect('mongodb://127.0.0.1/test', {useNewUrlParser: true, useUnifiedTopology: true})
+
+const db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function() {
+  // we're connected!
+  console.log("we are connected now!")
+})
+//login schema
+const loginSchema = new mongoose.Schema({
+    username: String,
+    password: String
+  })
+
+const loginThing = mongoose.model('loginStuff', loginSchema)
+
 const app = express()
 
 let port = process.env.PORT || 8080
