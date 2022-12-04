@@ -59,12 +59,10 @@
         </div>
         <!--Users Playlist-->
         <div>
-            <button type="button" class="btn btn-outline-dark">Playlist1</button>
-            <br><br>
-            <button type="button" class="btn btn-outline-dark">Playlist2</button>
-            <br><br>
-            <button type="button" class="btn btn-outline-dark">Playlist3</button>
-            <br><br>
+            <h2>PLAY BUTTON</h2>
+            <button type="button" class="btn btn-outline-dark">
+                <img src="../Images/play-button.png" class="img1">
+            </button>
         </div>
     </div>
 
@@ -72,44 +70,6 @@
     <div class="rightSide">
         <div class="header justify-content-center">
             <img src="../Images/defaultIMG.png" id="playlistIMG">
-            <h2 id="currentPlaylistName">Playlist Name</h2>
-        </div>
-
-        <!--Song Selection-->
-        <div>
-            <table class="table rightTable" id="songsList" style="width:100%">
-                <tr>
-                    <th style="width:5%">#</th>
-                    <th style="width:70%">Title</th>
-                    <th style="width:20%">Time</th>
-                </tr>
-                <!--PLACE HOLDER DATA-->
-                <tr>
-                    <td>1</td>
-                    <td>P.I.M.P</td>
-                    <td>4:09</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>AROUNT THE WORLD - EEM TRIPLIN</td>
-                    <td>2:06</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Marvins Room</td>
-                    <td>5:47</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>See You Again (feat.Kali Uchis)</td>
-                    <td>3:00</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Winter Blossom(feat.SAAY)</td>
-                    <td>3:38</td>
-                </tr>
-            </table>
         </div>
 
         <div class="nowPlaying bottom-centering">
@@ -117,16 +77,9 @@
                 <h2>SONG PLAYING TITLE</h2>
             </div>
             <div>
-                <button type="button" class="btn btn-link">
-                    <img src="../Images/play-button.png" class="img1">
-                </button>
-                <button type="button" class="btn btn-link">
-                    <img src="../Images/pause.png" class="img1">
-                </button>
-                <button type="button" class="btn btn-link">
-                    <img src="../Images/high-volume.png" class="img2">
-                </button>
-                <input type="range" id="volumeSlider"></imput>
+                <audio controls>
+                    <source src="https://www.dropbox.com/s/futh5em2b8x11oy/Dee%20Yan-Key%20-%20Leise%20rieselt%20der%20Schnee.mp3?raw=1" type="audio/mpeg">
+                </audio>
             </div>
         </div>
     </div>
