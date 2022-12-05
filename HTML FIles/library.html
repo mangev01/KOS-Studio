@@ -12,10 +12,10 @@
     <link rel="stylesheet" type="text/css" href="../CSS Files/navbar.css" />
     <link rel="stylesheet" type="text/css" href="/librarycss" />
     <link rel="stylesheet" type="text/css" href="/navbarcss" />
-    <script type="text/js" src="../JS Files/library.js"></script>
+    <script type="text/javascript" src="../JS Files/library.js"></script>
 </head>
 
-<body>
+<body onload="getSong1()">
     <!--This creates Navigaction bar at the top of the page-->
     <div>
         <nav class="nav-container">
@@ -64,7 +64,7 @@
         </div>
         <!--Users Playlist-->
         <div>
-            <button type="button" class="btn btn-outline-dark">SHUFFLE</button>
+            <button type="button" class="btn btn-outline-dark" onclick="getSong1()">POPULATE</button>
             <h2>NOW PLAYING: </h2>
             <h2 id="songPlaying">""</h2>
         </div>
@@ -73,19 +73,20 @@
     <!--Current Playlist info-->
     <div class="rightSide">
             <!--SONG 1-->
-            <div class="card">
+            <div id="card1" class="card">
                 <div class="cardHeader">
                     <h2>Leise rieselt der Schnee</h2>
                 </div>
                 <div class="container">
-                    <audio controls>
+                    <audio id="audio" controls>
                         <source
-                            src="https://www.dropbox.com/s/futh5em2b8x11oy/Dee%20Yan-Key%20-%20Leise%20rieselt%20der%20Schnee.mp3?raw=1"
+                            id="song1"
+                            src=""
                             type="audio/mpeg">
                     </audio>
                 </div>
                 <div class="cardFooting">
-                    <h2>1 - BY Dee Yan-Key</h2>
+                    <h2>1</h2>
                 </div>
             </div>
             <!--SONG 1 FINISH-->
@@ -279,6 +280,12 @@
             </div>
             <!--SONG 12 FINISH-->
     </div>
+
+    <script>
+        function hi() {
+            alert('HELLO');
+        }
+    </script>
 
 </body>
 

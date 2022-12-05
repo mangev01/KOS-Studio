@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/mangev01/KOS-Studio#readme",
   "dependencies": {
-    "mongoose": "^6.7.2"
+    "mongoose": "^6.7.2",
+    "npm": "^9.1.3"
   },
   "keywords": [],
   "devDependencies": {
