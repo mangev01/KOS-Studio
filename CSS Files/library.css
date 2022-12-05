@@ -20,7 +20,7 @@ body {
 
 .cardHeader {
     height: 20%;
-    background-color: purple;
+    background-color: blueviolet;
     color: white;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .cardFooting {
     height: 20%;
-    background: purple;
+    background: blueviolet;
     color: white;
 }
 
