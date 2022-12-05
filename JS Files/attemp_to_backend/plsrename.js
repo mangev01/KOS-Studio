@@ -29,38 +29,38 @@ let port = process.env.PORT || 8080
 
 //get images
 
-app.use(express.static(path.join(__dirname)))
+app.use(express.static(path.join(__dirname,'..','..')))
 
 //idk what this does but it makes it so you can see the page?
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','index.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','index.html'));
     res.status(200)
     console.log(200)
 })
 //mainpage GET
 app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','index.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','index.html'));
     res.status(200)
     console.log(200 + " to main page")
 })
 //mainpage styling
 app.get('/maincss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'styles.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'styles.css'));
 })
 
 //about page GET
 app.get('/about.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','about.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','about.html'));
     res.status(200)
     console.log(200 + " to about page")
 })
 //about page CSS
 app.get('/aboutcss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'styles.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'styles.css'));
 })
 //contact us page
 app.get('/contactUs.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','contactUs.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','contactUs.html'));
     res.status(200)
     console.log(200 + " to main page")
 })
@@ -68,35 +68,35 @@ app.get('/contactUs.html', (req, res) => {
 
 //developers page GET
 app.get('/developers.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','developers.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','developers.html'));
     res.status(200)
     console.log(200 + " developers")
 })
 //developers page CSS
 app.get('/developercss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'styles.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'styles.css'));
 })
 
 //Library GET
 app.get('/library.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','library.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','library.html'));
     res.status(200)
     console.log(200 + " to library page")
 })
 //Library CSS
 app.get('/librarycss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'library.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'library.css'));
 })
 
 //SignUpPage GET
 app.get('/signUpPage.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','signUpPage.html'));
+    res.sendFile(path.join(__dirname,'..','..','HTML Files','signUpPage.html'));
     res.status(200)
     console.log(200 + " to sign up page")
 })
 //signuppage CSS
 app.get('/signupcss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'signUpPage.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'signUpPage.css'));
 })
 
 app.post("/signUpPage.html",(req,res)=>{
@@ -104,14 +104,14 @@ app.post("/signUpPage.html",(req,res)=>{
         username: "qwerqwerqwer",
         password: "qwerqwerqwer"});
     myData.save().then(()=>{
-        res.status(200).sendFile(path.join(__dirname,'HTML Files','index.html'));
+        res.status(200).sendFile(path.join(__dirname,'..','..','HTML Files','index.html'));
         console.log(200 + " to main page")
     })
 })
 
 //navbar css
 app.get('/navbarcss', (req,res) => {
-    res.sendFile(path.join(__dirname,'csS Files', 'navbar.css'));
+    res.sendFile(path.join(__dirname,'..','..','CSS Files', 'navbar.css'));
 })
 
 //if the page was not found
