@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 })
 //mainpage GET
 app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(__dirname,'HTML Files','index.html'));
+    res.sendFile(path.join(__dirname,'index.html'));
     res.status(200)
     console.log(200 + " to main page")
 })

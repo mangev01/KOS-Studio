@@ -26,7 +26,7 @@ function validateLoginForm() {
 	}
 	else {
 		alert("Successfully logged in");
-		sendFile(path.join(__dirname,'HTML Files','index.html'));
+		sendFile(path.join(__dirname,'index.html'));
 		return true;
 	}
 }
