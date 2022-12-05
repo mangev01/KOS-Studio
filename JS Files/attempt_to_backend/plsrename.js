@@ -34,11 +34,13 @@ app.use(express.static(path.join(__dirname,'..', '..')))
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
     res.status(200)
+    console.log(200)
 })
 //mainpage GET
 app.get('/mainpage.html', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
     res.status(200)
+    console.log(200 + " to main page")
 })
 //mainpage styling
 app.get('/maincss', (req,res) => {
@@ -49,16 +51,25 @@ app.get('/maincss', (req,res) => {
 app.get('/about.html', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','about.html'));
     res.status(200)
+    console.log(200 + " to about page")
 })
 //about page CSS
 app.get('/aboutcss', (req,res) => {
     res.sendFile(path.join(__dirname,'..', '..','csS Files', 'styles.css'));
 })
+//contact us page
+app.get('/contactUs.html', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', '..','HTML Files','contactUs.html'));
+    res.status(200)
+    console.log(200 + " to main page")
+})
+
 
 //developers page GET
 app.get('/developers.html', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','developers.html'));
     res.status(200)
+    console.log(200 + " developers")
 })
 //developers page CSS
 app.get('/developercss', (req,res) => {
@@ -69,6 +80,7 @@ app.get('/developercss', (req,res) => {
 app.get('/library.html', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','library.html'));
     res.status(200)
+    console.log(200 + " to library page")
 })
 //Library CSS
 app.get('/librarycss', (req,res) => {
@@ -79,6 +91,7 @@ app.get('/librarycss', (req,res) => {
 app.get('/signUpPage.html', (req, res) => {
     res.sendFile(path.join(__dirname,'..', '..','HTML Files','signUpPage.html'));
     res.status(200)
+    console.log(200 + " to sign up page")
 })
 //signuppage CSS
 app.get('/signupcss', (req,res) => {
@@ -91,6 +104,7 @@ app.post("/signUpPage.html",(req,res)=>{
         password: "qwerqwerqwer"});
     myData.save().then(()=>{
         res.status(200).sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
+        console.log(200 + " to main page")
     })
 })
 
@@ -104,6 +118,7 @@ app.use((req, res) => {
     res.type('text/plain')
     res.status(404)
     res.send('404 Page Not Found')
+    console.log(404 + " Page not Found")
 })
 
 app.listen(port, function() {

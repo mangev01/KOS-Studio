@@ -4,7 +4,7 @@
   "description": "Web Application development project for CS372",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "homepage": "https://github.com/mangev01/KOS-Studio#readme",
   "dependencies": {
     "mongoose": "^6.7.2"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }
