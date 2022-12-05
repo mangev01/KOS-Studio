@@ -57,6 +57,13 @@ app.get('/about.html', (req, res) => {
 app.get('/aboutcss', (req,res) => {
     res.sendFile(path.join(__dirname,'..', '..','csS Files', 'styles.css'));
 })
+//contact us page
+app.get('/contactUs.html', (req, res) => {
+    res.sendFile(path.join(__dirname,'..', '..','HTML Files','contactUs.html'));
+    res.status(200)
+    console.log(200 + " to main page")
+})
+
 
 //developers page GET
 app.get('/developers.html', (req, res) => {
