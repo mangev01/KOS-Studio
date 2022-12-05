@@ -104,7 +104,7 @@ app.post("/signUpPage.html",(req,res)=>{
         username: "qwerqwerqwer",
         password: "qwerqwerqwer"});
     myData.save().then(()=>{
-        res.status(200).sendFile(path.join(__dirname,'HTML Files','index.html'));
+        res.status(200).sendFile(path.join(__dirname,'index.html'));
         console.log(200 + " to main page")
     })
 })
