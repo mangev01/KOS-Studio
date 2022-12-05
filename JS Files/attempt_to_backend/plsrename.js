@@ -1,8 +1,10 @@
 const express = require('express')
 const path = require('path')
-const mongoose=require("mongoose")
 
-mongoose.connect('mongodb://127.0.0.1/test', {useNewUrlParser: true, useUnifiedTopology: true})
+const mongoose = require('mongoose')
+
+
+mongoose.connect('mongodb+srv://TestUser:test@kosstudio.s0dh2.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
@@ -12,11 +14,13 @@ db.once('open', function() {
 })
 //login schema
 const loginSchema = new mongoose.Schema({
+    email: String,
     username: String,
     password: String
   })
 
-  const loginThing = mongoose.model('loginStuff', loginSchema)
+const loginThing = mongoose.model('loginStuff', loginSchema)
+
 
 const app = express()
 
@@ -53,8 +57,7 @@ app.get('/aboutcss', (req,res) => {
 
 //developers page GET
 app.get('/developers.html', (req, res) => {
-    //res.sendFile(path.join(__dirname,'..', '..','HTML Files','developers.html'));
-    res.render('developers.html')
+    res.sendFile(path.join(__dirname,'..', '..','HTML Files','developers.html'));
     res.status(200)
 })
 //developers page CSS
@@ -83,7 +86,9 @@ app.get('/signupcss', (req,res) => {
 })
 
 app.post("/signUpPage.html",(req,res)=>{
-    var myData=new loginThing(req.body);
+    var myData=new loginThing({email: "qwer@qwerqwer",
+        username: "qwerqwerqwer",
+        password: "qwerqwerqwer"});
     myData.save().then(()=>{
         res.status(200).sendFile(path.join(__dirname,'..', '..','HTML Files','mainpage.html'));
     })
