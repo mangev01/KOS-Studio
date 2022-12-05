@@ -9,6 +9,7 @@ mongoose.connect('mongodb+srv://TestUser:test@kosstudio.s0dh2.mongodb.net/?retry
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', function() {
+    
   // we're connected!
   console.log("we are connected now!")
 })
